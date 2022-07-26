@@ -1,6 +1,6 @@
 # honey
 
-typora-personal-theme.
+This is a personal typora's theme.
 
 <img src="docs/assets/icon.png" width="160" height="160" alt="logo" align="right" />
 
@@ -15,7 +15,13 @@ Personal Theme for Typora.
 
 ## USAGE
 
-ここにスクリプトを配置する.
+```
+bash ./script.sh
+```
+
+## Documents
+
+- [docs](./docs/index.md)
 
 ## License
 
