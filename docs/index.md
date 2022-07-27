@@ -13,7 +13,8 @@ Set up to CSS for Typora's Themes.
 │   │   └── icon.png
 │   └── index.md ... this file
 ├── honey.css ... main part
-└── script.sh ... deploy tool
+├── script.sh ... deploy tool
+└── script.bat ... deploy tool for windows
 ```
 
 ## Reference
