@@ -15,8 +15,16 @@ Personal Theme for Typora.
 
 ## USAGE
 
+### Case Linux.
+
 ```
 bash ./script.sh
+```
+
+### Case Windows.
+
+```
+script.bat
 ```
 
 ## Documents
