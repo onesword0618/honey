@@ -6,7 +6,7 @@
   --active-file-text-color: #202020;
   --table-even-row-color:#F8FCFA;
   --table-head-color:#C7DC68;
-  --deep-theme-color: #FCA400;
+  --deep-theme-color: #FCDEA4;
   --code-block-bg-color: #0F111A;
 }
 
@@ -123,13 +123,32 @@ body {
   color: var(--deep-theme-color);
 }
 
+/* <a>: */
 a {
-  color: var(--deep-theme-color);
-  text-decoration: none;
+  outline: none;
+}
+
+a:link {
+  color: #3366CC;
+}
+
+a:visited {
+  color: #765AC9;
 }
 
 a:hover {
+  background: #0085F2;
   text-decoration: underline;
+}
+
+a:active {
+  background: #02552A;
+  color: #F2FFFE;
+}
+
+a:focus {
+  border-bottom: 1px solid;
+  color: #0085F2;
 }
 
 /* MarkDown Tags. */
