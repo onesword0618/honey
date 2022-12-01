@@ -35,6 +35,10 @@ script.bat
 
 - [MIT](./LICENSE)
 
+### Use Font 
+
+"Noto Sans JP" is lisenced under the SIL Open Font License 1.1
+
 ### Author
 
 [![twitter](https://img.shields.io/badge/twitter-ffffff?style=plastic&logo=twitter&logoColor=1DA1F2)](https://twitter.com/onesword0618)
