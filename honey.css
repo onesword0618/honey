@@ -1,36 +1,76 @@
 :root {
+  --font-color: #333333;
+  --horizontal-color:#333333;
+  --primary-color:#FCDEA4;
+  --accent-color: #32E3A5;
+  --base-color:#C7C4BF;
+
+  /* table */
+  --table-head-color:#A26900;
+  --table-even-row-color:#F8FCFA;
+  /* code block */
+  --code-block-bg-color: #F5F2F0;
+
+  /* test */
   --side-bar-bg-color: #C7DC68;
   --control-text-color: #6B6B6B;
   --active-file-bg-color: #A26900;
   --active-file-border-color: #6B6B6B;
   --active-file-text-color: #202020;
-  --table-even-row-color:#F8FCFA;
-  --table-head-color:#C7DC68;
   --deep-theme-color: #FCDEA4;
-  --code-block-bg-color: #0F111A;
+  --body-color: #A55500;
+}
+
+/* Use Web Fonts */
+/*
+ * "Noto Sans JP" is lisenced under the SIL Open Font License 1.1
+ * http://fonts.googleapis.com
+ * https://www.google.com/fonts/attribution
+ * http://scripts.sil.org/OFL
+ */
+@font-face {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  src: local('Noto Sans JP Regular'), local('NotoSansJP-Regular'), url('./honey/NotoSansJP-Regular.otf') format('otf');
+}
+
+@font-face {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  src: local('Noto Sans JP Bold'), local('NotoSansJP-Bold'), url('./honey/NotoSansJP-Bold.otf') format('otf');
 }
 
 /* Typora Editer Display Tags. */
 
-html{
+html {
   font-size: 16px;
 }
 
 body {
-  font-family: 'Consolas','Ricty Diminished';
-  font-weight: normal;
-  line-height: 1.5rem;
-  letter-spacing: 0;
-  margin: 0;
+  font-family: 'Noto Sans JP';
+  font-style: normal;
+  font-variant: normal;
+  font-size: medium;
+  font-weight: 500;
+  text-transform: none;
+  text-decoration: none;
+  color: var(--font-color);
+  line-height: 1.5;
 }
 
 /* Typora origin */
+
+/* preview mode */
 #write {
   max-width: 900px;
-  padding: 30px 50px 20px;
+  margin: 0 auto;
+  padding: 30px;
+  padding-bottom: 100px;
 }
 
-#write p{
+#write p {
   text-align:left;
 }
 
@@ -49,7 +89,7 @@ body {
 #write mark {
   background-color: #FFF;
   border-radius: 2px;
-  color: black;
+  color: #333333;
   padding: 0 4px;
   margin: 0 2px;
 }
@@ -58,8 +98,7 @@ body {
 #write code,tt {
   padding: 0.6px 4px;
   border-radius: 2px;
-  background-color: #FFF;
-  font-family: 'Consolas','Ricty Diminished';
+  background-color: var(--control-text-color);
   font-size: 0.9rem;
   color: var(--code-block-bg-color);
   margin: 0 2px;
@@ -78,17 +117,15 @@ body {
   padding: 0.5em;
   border-radius: 3px;
   font-size: 0.9em;
-  font-family: 'Consolas','Ricty Diminished';
   background-color: var(--code-block-bg-color);
-  color: #A9B7C6;
+  color: var(--font-color);
   border: none;
   text-shadow: none;
 }
 
-.md-image>.md-meta {
+.md-image > .md-meta {
   color: #FFF;
   font-size: 0.9rem;
-  font-family: 'Consolas','Ricty Diminished';
   padding: 4px 0;
 }
 
@@ -154,9 +191,12 @@ a:focus {
 /* MarkDown Tags. */
 
 /* headers */
+
+/* header-commons */
 h1,h2,h3,h4,h5,h6 {
   display: block;
   font-weight:bold;
+  font-family: 'Noto Sans JP';
 }
 
 h1 {
@@ -188,14 +228,12 @@ h5 {
   font-size: 1em;
   margin-top: 1.33em;
   margin-bottom: 1.33em;
-  color: #FFF;
 }
 
 h6 {
   font-size: 1em;
   margin-top: 1.33em;
   margin-bottom: 1.33em;
-  color: #FFF;
 }
 
 /* others */
@@ -215,9 +253,6 @@ table {
   word-break: initial;
   width: 100%;
 }
-table tr:nth-child(even){
-    background-color: var(--table-even-row-color);
-}
 thead{
   background-color: var(--table-head-color);
 }
@@ -234,12 +269,16 @@ table tr{
   padding:6px 13px;
   border: 1px solid var(--table-head-color);
 }
+table tr:nth-child(even){
+  background-color: var(--table-even-row-color);
+}
+
 
 /* blockquote */
 blockquote {
   border-left: 0.2rem solid var(--side-bar-bg-color);
-  color: #FFF;
-  font-family: 'Consolas','Ricty Diminished';
+  color: var(--side-bar-bg-color);
+  font-family: 'Noto Sans JP';
   font-size: 0.9rem;
   padding-left: 2rem;
 }
@@ -303,14 +342,14 @@ input[type='checkbox']:hover:before {
 hr {
   border-style: none;
   border-top-style: solid;
-  border-color: #FFF;
+  border-color: var(--horizontal-color);
   border-width: 1px;
   margin: 2rem 0;
 }
 
 /* source code mode */
 .cm-s-typora-default .cm-header {
-  color:var(--code-block-bg-color);
+  color:var(--font-color);
 }
 .cm-s-typora-default .cm-link {
   color:var(--deep-theme-color);
@@ -322,21 +361,21 @@ hr {
 }
 
 .cm-s-inner.CodeMirror {
-  background-color: #FFF;
-  color: #FFF;
+  background-color: var(--code-block-bg-color);
+  color:  var(--control-text-color);
 }
 
 .cm-s-inner .CodeMirror-gutters {
   background: #FFF;
-  color: #FFF;
+  color: var(--control-text-color);
   border: none;
 }
 
-.cm-s-inner .CodeMirror-linenumber {color: #FFF;}
-.cm-s-inner .CodeMirror-guttermarker { color: #FFF; }
-.cm-s-inner .CodeMirror-guttermarker-subtle { color: #FFF; }
-.cm-s-inner .CodeMirror-cursor { border-left: 1px solid #FFF; }
-.cm-s-inner div.CodeMirror-cursor { border-left: 1px solid #FFF; }
+.cm-s-inner .CodeMirror-linenumber {color: var(--control-text-color);}
+.cm-s-inner .CodeMirror-guttermarker { color: var(--control-text-color); }
+.cm-s-inner .CodeMirror-guttermarker-subtle { color: var(--control-text-color); }
+.cm-s-inner .CodeMirror-cursor { border-left: 1px solid var(--control-text-color); }
+.cm-s-inner div.CodeMirror-cursor { border-left: 1px solid var(--control-text-color); }
 .cm-s-inner div.CodeMirror-selected {
   background: rgba(113, 124, 180, 0.2);
 }
@@ -406,7 +445,7 @@ hr {
 }
 
 .cm-s-inner .cm-variable {
-  color: #FFF;
+  color: var(--control-text-color);
 }
 
 .cm-s-inner .cm-tag {
