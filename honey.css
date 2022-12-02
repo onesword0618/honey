@@ -1,6 +1,10 @@
 :root {
   --font-color: #333333;
   --horizontal-color:#333333;
+  --primary-color:#FCDEA4;
+  --accent-color: #32E3A5;
+  --base-color:#C7C4BF;
+
   /* table */
   --table-head-color:#A26900;
   --table-even-row-color:#F8FCFA;
