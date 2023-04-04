@@ -27,13 +27,13 @@ bash ./script.sh
 script.bat
 ```
 
-## Documents
-
-- [docs](./docs/index.md)
-
 ## License
 
 - [MIT](./LICENSE)
+
+### Use Font
+
+"Noto Sans JP" is lisenced under the SIL Open Font License 1.1
 
 ### Author
 
